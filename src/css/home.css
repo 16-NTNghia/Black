@@ -1,0 +1,237 @@
+.home-container{
+    min-height: 100vh;
+}
+
+.text-container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-title {
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    white-space: pre;
+    height: 20vh;
+    padding-top: 100px; /* Thêm khoảng cách dư bên trên */
+}
+
+.text-title span {
+    display: inline-block;
+    animation: wave 3.5s infinite ease-in-out;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-75px);
+        color: hsl(calc(var(--i) * 30), 80%, 60%);
+    }
+}
+
+
+.text-content {
+    margin: 0 150px;
+    font-size: 30px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.line {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 0;
+    animation: typing 4s steps(40) forwards;
+    margin-bottom: 10px;
+}
+
+/* Con trỏ nhấp nháy trong dòng */
+.line::after {
+    content: '';  /* Con trỏ là dấu "|" */
+    position: absolute;
+    width: 15px;  /* Điều chỉnh độ rộng con trỏ */
+    height: 100%; /* Điều chỉnh chiều cao con trỏ */
+    background-color: white; /* Màu sắc con trỏ */
+    right: 0;  /* Đặt con trỏ ngay sau chữ */
+    top: 0;
+    animation: blinkCaret 0.75s step-end infinite, disappearCaret 4s forwards; /* Con trỏ biến mất sau khi hoàn thành */
+}
+
+/* Hiệu ứng nhấp nháy của con trỏ */
+@keyframes blinkCaret {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Hiệu ứng đánh máy */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%; /* Đảm bảo dòng chữ hiển thị đầy đủ */
+    }
+}
+
+/* Hiệu ứng biến mất của con trỏ sau khi hoàn thành dòng chữ */
+@keyframes disappearCaret {
+    0% {
+        visibility: visible; /* Hiển thị con trỏ khi dòng chữ đang gõ */
+    }
+    90% {
+        visibility: visible; /* Con trỏ vẫn hiện trong suốt thời gian gõ */
+    }
+    100% {
+        visibility: hidden; /* Ẩn con trỏ khi dòng chữ hoàn thành */
+    }
+}
+
+/* Điều chỉnh độ trễ cho mỗi dòng */
+.line:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.line:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.line:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.line:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.line:nth-child(5) {
+    animation-delay: 20s;
+}
+
+.line:nth-child(6) {
+    animation-delay: 25s;
+}
+
+/* Điều chỉnh độ trễ cho mỗi dòng */
+.line:nth-child(1)::after {
+    animation-delay: 0s;
+}
+
+.line:nth-child(2)::after {
+    animation-delay: 5s;
+}
+
+.line:nth-child(3)::after {
+    animation-delay: 10s;
+}
+
+.line:nth-child(4)::after {
+    animation-delay: 15s;
+}
+
+.line:nth-child(5)::after {
+    animation-delay: 20s;
+}
+
+.line:nth-child(6)::after {
+    animation-delay: 25s;
+}
+
+/* Cấu trúc bao quanh ảnh */
+.home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Chiều cao vùng chứa */
+    overflow: hidden; /* Đảm bảo không bị tràn ảnh */
+}
+
+/* Khung cửa sổ */
+.window-frame {
+    position: relative;
+    display: inline-block;
+    border: 10px solid #ff5722; /* Viền cửa sổ màu cam đậm */
+    border-radius: 20px; /* Bo góc cửa sổ với góc tròn lớn */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* Đổ bóng đậm hơn cho cửa sổ */
+    animation: frameSlideIn 1s ease-out forwards;
+    transform: translateX(100%); /* Đặt cửa sổ ngoài màn hình bên phải */
+    overflow: hidden;
+    background-color: #fff; /* Nền màu trắng cho cửa sổ */
+}
+
+/* Kính cửa sổ (phần kính bên trong cửa sổ) */
+.window-glass {
+    position: relative;
+    padding: 25px;
+    background-color: #f8f8f8; /* Nền kính sáng với sắc xám nhẹ */
+    border-radius: 15px; /* Bo góc kính */
+    overflow: hidden;
+    animation: glassSlideIn 1s ease-out forwards;
+    transform: translateX(100%); /* Đặt kính ngoài màn hình bên phải */
+    animation-delay: 0.2s; /* Kính sẽ chạy vào sau khung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ cho kính */
+}
+
+/* Ảnh trong cửa sổ (giữ nguyên tên class là image-content) */
+.image-content {
+    display: block;
+    width: 100%;
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá kích thước khung */
+    height: auto; /* Giữ tỷ lệ khung hình của ảnh */
+    object-fit: cover; /* Cắt ảnh để phù hợp với khung */
+    border-radius: 10px; /* Bo góc cho ảnh */
+    animation: imageSlideIn 1s ease-out forwards;
+    transform: translateX(100%); /* Đặt ảnh ngoài màn hình bên phải */
+    animation-delay: 0.4s; /* Ảnh sẽ chạy vào sau kính */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng cho ảnh */
+    /* Viền đứt nét quanh ảnh */
+    outline: 5px dashed #ff5722; /* Viền đứt nét màu cam quanh ảnh */
+    padding: 10px; /* Khoảng cách giữa viền và ảnh */
+}
+
+/* Hiệu ứng di chuyển khung cửa sổ từ phải vào */
+@keyframes frameSlideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Hiệu ứng di chuyển kính từ phải vào */
+@keyframes glassSlideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Hiệu ứng di chuyển ảnh từ phải vào */
+@keyframes imageSlideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

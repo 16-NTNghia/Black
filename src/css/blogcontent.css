@@ -1,0 +1,236 @@
+
+/* Định dạng chung cho bài viết */
+.post_content {
+    margin-top: 10vh;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+/* Tiêu đề bài viết */
+.post_content h1 {
+    font-size: 2.5rem;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ngày đăng bài viết */
+.post-date {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Định dạng phần nội dung */
+.post-content h3 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.post-content h5 {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Định dạng cho hình ảnh trong bài viết */
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hiệu ứng hover cho hình ảnh */
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Định dạng cho các biểu tượng tick */
+.fa-check {
+    color: #28a745;
+}
+
+/* Định dạng cho các liên kết */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Định dạng phần tóm tắt bài viết */
+.post-summary {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Liên kết đọc thêm */
+.read-more {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.blog-link a{
+    display: block; /* Để toàn bộ vùng clickable */
+    margin: 10px 0;
+    padding: 12px 16px;
+    background-color: #f4f4f4; /* Màu nền nhạt */
+    color: #007BFF; /* Màu chữ */
+    text-decoration: none; /* Bỏ gạch chân */
+    border-radius: 8px; /* Bo góc */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* In đậm chữ */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.blog-link a:hover {
+    background-color: #e3e3e3; /* Màu nền khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng nổi */
+    color: #0056b3; /* Màu xanh đậm hơn khi hover */
+}
+
+
+/* Styling the table */
+.js-variables-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.js-variables-table th,
+.js-variables-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.js-variables-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.js-variables-table td {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect */
+.js-variables-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.js-variables-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Styling for each class */
+.js-variable-name {
+    font-weight: bold;
+}
+
+.js-type {
+    color: #888;
+}
+
+.js-description {
+    font-style: italic;
+}
+
+.editor-container {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1e1e1e; /* Màu nền đen */
+    border-radius: 8px; /* Bo góc khung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    overflow: hidden;
+}
+
+.code-area {
+    padding: 16px;
+    color: #dcdcdc; /* Màu chữ xám nhạt */
+    font-size: 16px; /* Font chữ lớn hơn */
+    line-height: 1.6; /* Tăng khoảng cách giữa các dòng */
+    position: relative;
+}
+
+.code-screen {
+    margin: 0;
+    white-space: pre-wrap; /* Bảo toàn khoảng trắng */
+    overflow-x: auto; /* Cuộn ngang khi cần */
+}
+
+.code-screen code {
+    color: #d4d4d4;
+    background: none;
+}
+
+.code-screen code span {
+    display: inline-block;
+}
+
+/* Highlight màu cú pháp cơ bản */
+.code-screen .keyword {
+    color: #569cd6;
+}
+
+.code-screen .string {
+    color: #ce9178;
+}
+
+.number {
+    color: #FFEC8B; /* Màu xanh lá cây cho các số */
+}
+
+.case {
+    color: #5bc0de; /* Màu xanh dương */
+    font-weight: bold; /* Chữ đậm */
+}
+
+.default {
+    color: #d9534f; /* Màu đỏ */
+    font-weight: bold; /* Chữ đậm */
+}
+
+.boolean {
+    color: #d3ad5f; /* Màu vàng cho boolean */
+}
+
+.code-screen .comment {
+    color: #6a9955;
+    font-style: italic;
+}
+.function {
+    color: #a6e22e;
+}
+.console {
+    color: #fd971f; /* Màu cam đậm */
+    font-weight: bold;
+}

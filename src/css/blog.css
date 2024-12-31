@@ -1,0 +1,97 @@
+
+/* Container để căn giữa bài viết */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section chứa các bài viết */
+.blog-posts {
+    display: block;
+    margin-top: 20px;
+    padding: 0;
+}
+
+/* Định dạng cho mỗi bài viết */
+.post {
+    display: block;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+    overflow: hidden;
+    border-left: 6px solid #007bff; /* Thêm một đường viền nổi bật bên trái */
+}
+
+/* Thêm background gradient cho mỗi bài viết */
+.post::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    z-index: -1;
+}
+
+/* Tiêu đề bài viết */
+.post-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Ngày đăng bài viết */
+.post-date {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Tóm tắt bài viết */
+.post-summary {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* Liên kết đọc thêm */
+.read-more {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    border: 2px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    letter-spacing: 1px;
+}
+
+/* Hiệu ứng hover cho liên kết đọc thêm */
+.read-more:hover {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.1); /* Tăng kích thước khi hover */
+}
+
+/* Hiệu ứng hover cho bài viết */
+.post:hover {
+    transform: translateY(-15px); /* Di chuyển bài viết lên */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tăng độ bóng */
+    border-left: 6px solid #ff6347; /* Đổi màu viền khi hover */
+}

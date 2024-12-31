@@ -1,0 +1,32 @@
+/* Điều chỉnh màu nền và viền cho thẻ card */
+.dark-card, .dark-list{
+    background-color: #424242;  /* Nền tối */
+    border-color: #333;         /* Viền tối */
+}
+
+/* Điều chỉnh màu sắc của avatar */
+.dark-avatar {
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Các mục trong danh sách mạng xã hội */
+.dark-list-item {
+    background-color: #424242;
+    border-bottom: 1px solid #444;  /* Viền giữa các mục */
+}
+
+/* Tùy chỉnh màu sắc cho các liên kết */
+.dark-text {
+    color: white;  /* Màu sáng cho văn bản */
+}
+
+/* Điều chỉnh màu sắc cho các mục danh sách mạng xã hội */
+.dark-list-item p {
+    color: white;  /* Màu chữ sáng cho các liên kết */
+}
+
+/* Chỉnh sửa các màu sắc tương phản cho các mục khác */
+.dark-text-muted {
+    color: #d1d1d1;  /* Chữ nhạt hơn cho các thông tin phụ */
+}
