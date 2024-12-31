@@ -19,7 +19,7 @@
     position: relative;
     white-space: pre;
     height: 20vh;
-    padding-top: 100px; /* Thêm khoảng cách dư bên trên */
+    padding-top: 70px; /* Thêm khoảng cách dư bên trên */
 }
 
 .text-title span {
@@ -40,7 +40,7 @@
 
 
 .text-content {
-    margin: 0 150px;
+    margin: 0px;
     font-size: 30px;
     color: white;
     font-family: 'Courier New', Courier, monospace;
