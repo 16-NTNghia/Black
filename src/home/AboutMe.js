@@ -14,7 +14,7 @@ export default function AboutMe() {
                         <div className="col-lg-4">
                             <div className="card mb-4 dark-card">
                                 <div className="card-body text-center">
-                                    <img src="/images/logo.webp" alt="avatar" className="rounded-circle img-fluid dark-avatar" style={{ width: 150 }} />
+                                    <img src="/images/profile.jpg" alt="avatar" className="rounded-circle img-fluid dark-avatar" style={{ width: 150 }} />
                                     <h5 className="my-3 dark-text">Nguyễn Thành Nghĩa</h5>
                                     <p className="mb-1 dark-text-muted">Sinh viên</p>
                                     <p className="mb-4 dark-text-muted">Đại học công nghệ thành phố Hồ Chí Minh</p>

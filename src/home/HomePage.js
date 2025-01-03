@@ -42,7 +42,7 @@ export default function HomePage() {
                             <div className="col-4 home-image">
                                 <div className="window-frame">
                                     <div className="window-glass">
-                                        <img className="image-content" src="/images/home.png" alt="home" />
+                                        <img className="image-content" src="/images/profile_2.jpg" alt="home" />
                                     </div>
                                 </div>
                             </div>
